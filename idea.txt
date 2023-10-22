@@ -1,0 +1,20 @@
+RPC services
+1) Tracing
+2) Rich Error
+3) Load Balancing
+4) Interceptors
+5) Health Checks
+6) Request/response compression
+7) Auto reloading
+8) Authentication
+
+Technology
+GRPC
+Redis
+RabbitMQ
+REST
+Docker
+Kubernetes
+Tonic -> GRPC
+Axum -> REST
+ORM -> SeaORM
