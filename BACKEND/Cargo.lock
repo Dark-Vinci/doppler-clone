@@ -10,6 +10,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "gateway"
+version = "0.1.0"
+dependencies = [
+ "sdk",
+]
+
+[[package]]
 name = "sdk"
 version = "0.1.0"
 
