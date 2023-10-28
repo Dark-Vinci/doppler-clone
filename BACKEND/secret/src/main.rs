@@ -1,4 +1,5 @@
 use sdk;
+// use secret;
 
 fn main() {
     let a = sdk::add(2, 5);

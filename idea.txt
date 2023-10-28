@@ -8,6 +8,34 @@ RPC services
 7) Auto reloading
 8) Authentication
 
+REST service
+1) Tracing
+2) Global404
+3) Graceful shutdown
+4) JWT
+5) oauth
+6) SSE
+7) Testing
+8) Validator
+9) Websocket
+10) File streaming
+11) QP extractor
+12) Head Request
+13) anyhow/thiserror error handling
+14) Auto reload
+15) Key/Value state
+16) Multipart
+17) .merge (route handlers)
+18) Tracing
+19) Logging
+20) Body Extractor
+21) Param Extractor
+22) Print request response
+23)
+
+Main -> Middleware -> Handler -> APP -> Downstream -> Model
+Error
+
 Technology
 GRPC
 Redis

@@ -3,7 +3,19 @@ name = "gateway"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "gateway"
+path = "src/main.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1.0.75"
+axum = "0.6.20"
 sdk = { path = "../sdk" }
+thiserror = "1.0.50"
+tokio = { version = "1.33.0", features = ["macros", "rt-multi-thread"] }
+validator = "0.16.1"
