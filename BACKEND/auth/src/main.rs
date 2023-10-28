@@ -1,5 +1,4 @@
 use sdk;
-// use auth;
 
 fn main() {
     let a = sdk::add(1, 3);
