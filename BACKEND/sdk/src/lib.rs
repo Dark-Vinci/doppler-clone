@@ -3,8 +3,12 @@ pub fn add(left: usize, right: usize) -> usize {
 }
 
 pub mod my_module {
-    pub fn div(a: usize, b: usize) -> usize {
-        return a / b;
+    pub fn div(a: usize, b: usize) -> Option<usize> {
+        if b == 0 {
+            return None;
+        }
+
+        return Some(a / b);
     }
 
     pub fn mul(a: usize, b: usize) -> usize {
