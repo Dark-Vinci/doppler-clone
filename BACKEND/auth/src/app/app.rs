@@ -28,18 +28,18 @@ impl App {
 
 impl Application for App {
     async fn login(&self) -> String {
-        return login().await;
+        return login(&self).await;
     }
 
     async fn sign_in(&self) -> String {
-        return sign_in().await;
+        return sign_in(&self).await;
     }
 
     async fn sign_in_with_google(&self) -> String {
-        return sign_up_with_google().await;
+        return sign_up_with_google(&self).await;
     }
 
     async fn sign_in_with_github(&self) -> String {
-        return sign_in_with_github().await;
+        return sign_in_with_github(&self).await;
     }
 }
