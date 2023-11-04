@@ -17,3 +17,4 @@ async-trait = "0.1.74"
 sdk = { path = "../sdk" }
 tokio = "1.29.1"
 anyhow = "1.0.72"
+dotenvy = "0.15.7"
