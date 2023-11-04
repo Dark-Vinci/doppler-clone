@@ -1,8 +1,8 @@
 #[derive(Debug)]
 pub struct AppData {
-    store: String,
-    downstream: String,
-    secret: String,
+    pub store: String,
+    pub downstream: String,
+    pub secret: String,
 }
 
 impl AppData {
