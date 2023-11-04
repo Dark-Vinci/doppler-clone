@@ -13,7 +13,8 @@ WORKDIR /app/user/auth
 ARG port=3001
 ARG environment=development
 
-COPY ./auth/cargo*.toml /app/user/auth
+COPY ./auth/cargo.toml /app/user/auth
+COPY ./cargo.lock ./
 
 RUN cargo build
 
