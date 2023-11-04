@@ -1,4 +1,4 @@
-use crate::application::app::AppData;
+use crate::application::application::AppData;
 
 pub async fn sign_in(a: &AppData) -> String {
     "".to_owned()

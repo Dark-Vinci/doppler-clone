@@ -6,7 +6,7 @@ use crate::application::signup::{
     sign_up_with_google,
 };
 
-struct Applications(AppData);
+pub struct Applications(AppData);
 
 impl Applications {
     fn new(data: AppData) -> Self {

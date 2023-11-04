@@ -1,4 +1,4 @@
-pub mod app;
+pub mod application;
 pub mod app_data;
 
 mod login;
