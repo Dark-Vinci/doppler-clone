@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/BACKEND/sdk/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BACKEND/secret/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BACKEND/gateway/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/BACKEND/target" />
     </content>
     <orderEntry type="inheritedJdk" />
