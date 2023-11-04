@@ -11,6 +11,10 @@ async fn main() -> Result<()>{
 
     let PORT = env!("PORT");
     let ENVIRONMENT = env!("ENVIRONMENT");
+    let DB_PASSWORD = env!("DB_PASSWORD");
+    let DB_HOST = env!("DB_HOST");
+    let DB_NAME = env!("DB_NAME");
+    let DB_USERNAME = env!("DB_USERNAME");
 
     let a = AppData::new("a".to_owned(), "b".to_owned(), "s".to_owned());
 
