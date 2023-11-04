@@ -1,5 +1,6 @@
-pub mod server;
-pub mod store;
+pub mod controllers;
+pub mod repositories;
 pub mod migrations;
-pub mod app;
+pub mod application;
 pub mod downstream;
+pub mod models;

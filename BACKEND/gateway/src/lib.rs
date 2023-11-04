@@ -1,6 +1,6 @@
 pub mod models;
-pub mod handlers;
+pub mod controllers;
 pub mod errors;
 pub mod downstream;
-pub mod app;
-mod middlewares;
+pub mod application;
+pub mod middlewares;
