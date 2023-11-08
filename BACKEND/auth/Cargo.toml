@@ -18,3 +18,12 @@ sdk = { path = "../sdk" }
 tokio = "1.29.1"
 anyhow = "1.0.72"
 dotenvy = "0.15.7"
+sea-orm = { version = "0.12.4", features = ["uuid"] }
+chrono = "0.4.31"
+sea-orm-macros = "0.12.5"
+serde = "1.0.192"
+# sea-orm-macros = "0.12.5"
+#
+#sea-orm-macros = { version = "0.12.3", default-features = false, features = ["strum"] }
+#sea-query = { version = "0.30.2", default-features = false, features = ["backend-postgres", "uuid"] }
+#sea-query-binder = { version = "0.5.0", default-features = false, optional = true }
