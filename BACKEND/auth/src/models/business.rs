@@ -1,3 +1,5 @@
+use std::error::Error;
+
 use sea_orm::{ActiveModelBehavior, DeriveEntityModel, Related, RelationDef};
 use sea_orm::entity::prelude::*;
 use sea_orm::prelude::{DateTime, Uuid};
@@ -50,3 +52,11 @@ impl Related<super::user::Entity> for Entity {
 }
 
 impl ActiveModelBehavior for ActiveModel {}
+
+fn check(a: &dyn Error) -> bool {
+    if a.is::<DbErr>() {
+        return true;
+    }
+
+    return false;
+}

@@ -13,7 +13,10 @@ use sea_orm::entity::prelude::{
     EnumIter,
     Uuid,
 };
-use serde::{Deserialize, Serialize};
+use serde::{
+    Deserialize,
+    Serialize,
+};
 
 #[derive(Clone, Debug, PartialEq, DeriveEntityModel, Serialize, Deserialize)]
 #[sea_orm(table_name = "users", schema_name = "public")]
