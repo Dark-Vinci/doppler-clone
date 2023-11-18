@@ -3,7 +3,7 @@ pub const PORT: &'static str = "PORT";
 pub const JWT_SECRET: &'static str = "JWT_SECRET";
 
 
-fn me(a: i32) -> bool {
+fn me(a: i32) -> () {
     if a.ge(&10) {
         true
     }
@@ -17,6 +17,8 @@ fn me(a: i32) -> bool {
             break a;
         }
     };
+
+    println!("{:?}", num);
 }
 
 fn first_word(v: &String) -> &str {
@@ -46,7 +48,7 @@ mod test {
 
     #[test]
     #[should_panic(expected = "meme")]
-    fn panicker() {
+    fn nicker() {
         panic!("meme")
     }
 }
