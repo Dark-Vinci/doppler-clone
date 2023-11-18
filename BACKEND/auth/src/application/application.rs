@@ -36,6 +36,7 @@ impl App {
         downstream: String,
         config: Config,
         redis: String,
+        rabbit: String,
     ) -> Self {
         Self {
             store,
