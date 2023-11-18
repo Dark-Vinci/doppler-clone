@@ -1,6 +1,6 @@
 mod user;
 mod business;
 mod session;
-mod repositories;
+pub mod repositories;
 
 // sea orm stuffs go in here

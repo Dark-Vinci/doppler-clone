@@ -16,6 +16,12 @@ use crate::models::business::{
 pub struct BusinessRepository(String);
 
 impl BusinessRepository {
+    pub fn new(conn: String) -> Self {
+        Self(conn)
+    }
+}
+
+impl BusinessRepository {
     pub async fn create_business(&self, el: Model) -> Result<ActiveModel, &str> {
         let mut active_model = BusinessActiveModel {
             name: ActiveValue::Set(el.name),
@@ -39,7 +45,7 @@ impl BusinessRepository {
     }
 
     pub fn update_business(&self, _: Model) -> () {
-        // let
+        todo!()
     }
 
     pub async fn get_business_by_id(&self, id: Uuid) -> Result<Model, &'static str> {
@@ -54,5 +60,7 @@ impl BusinessRepository {
         Ok(business.unwrap().unwrap())
     }
 
-    pub async fn get_businesses(&self, _: Model) -> () {}
+    pub async fn get_businesses(&self, _: Model) -> () {
+        todo!()
+    }
 }

@@ -1,50 +1,50 @@
-use crate::application::app_data::AppData;
-use crate::application::app_trait::Application;
-use crate::application::login::Login;
-use crate::application::signup::SignUp;
+use crate::config::config::Config;
 
-pub struct Applications<'a> {
-    data: &'a AppData,
-    login: Login<'a>,
-    sign_up: SignUp<'a>,
+pub trait Auth {
+    async fn sign_in_with_email(&self) -> String;
+    async fn sign_up_with_email(&self) -> String;
+    async fn sign_in_with_google(&self) -> String;
+    async fn sign_up_with_google(&self) -> String;
 }
 
-impl Applications {
-    pub fn new(data: AppData) -> Self {
+pub trait User {
+    async fn get_user(&self) -> String;
+    async fn delete_user(&self) -> String;
+    async fn deactivated_user(&self) -> String;
+    async fn get_users(&self) -> Vec<String>;
+}
+
+pub trait Business {
+    async fn get_business(&self) -> String;
+    async fn delete_business(&self) -> String;
+}
+
+pub trait AppTrait: Auth + User + Business {}
+
+#[derive(Debug)]
+pub struct App {
+    pub store: String,
+    pub downstream: String,
+    pub config: Config,
+    pub redis: String,
+    pub rabbit: String,
+}
+
+impl App {
+    pub fn new(
+        store: String,
+        downstream: String,
+        config: Config,
+        redis: String,
+    ) -> Self {
         Self {
-            data: &data,
-            login: Login::new(&data),
-            sign_up: SignUp::new(&data),
+            store,
+            downstream,
+            config,
+            redis,
+            rabbit,
         }
     }
 }
 
-impl Application for Applications {
-    async fn sign_in_with_google(&self) -> String {
-        self.
-            login.
-            withGoogle().
-            await
-    }
-
-    async fn login(&self) -> String {
-        self.
-            login.
-            withEmail().
-            await
-    }
-
-    async fn sign_in_with_email(&self) -> String {
-        self.
-            login.
-            with_mail().
-            await
-    }
-
-    async fn sign_in_with_fb(&self) -> String {
-        self.
-            login.
-            with_google().
-            await
-    }
-}
+impl AppTrait for App {}
