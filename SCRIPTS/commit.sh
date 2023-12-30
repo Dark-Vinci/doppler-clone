@@ -15,3 +15,5 @@ echo "🤞PROJECT has been committed🤞"
 git push -u origin main
 
 echo "🚀🚀🚀PROJECT PUSHED TO GITHUB🚀🚀🚀"
+
+cd ../SCRIPTS
