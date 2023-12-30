@@ -1,4 +1,4 @@
-
+#!/bin/sh
 #deploy to KUBERNETES
 
 #1) run commit command
