@@ -1,6 +1,8 @@
 pub const APP_NAME: &'static str = "APP_NAME";
 pub const PORT: &'static str = "PORT";
 pub const JWT_SECRET: &'static str = "JWT_SECRET";
+pub const APP_ENVIRONMENT: &'static str = "APP_ENVIRONMENT";
+pub const IP_ADDR: &'static str = "IP_ADDR";
 
 
 fn me(a: i32) -> () {

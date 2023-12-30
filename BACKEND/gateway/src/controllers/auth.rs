@@ -24,7 +24,7 @@ impl AuthControllers {
         return (StatusCode::OK, "you\'re now logged in");
     }
 
-    pub async fn logout(&self) -> impl IntoResponse {
+    pub async fn logout<T: IntoResponse>(&self) -> T {
         // extract all needed info, pass to application[service]
         return (StatusCode::OK, "you\'re now logged out");
     }

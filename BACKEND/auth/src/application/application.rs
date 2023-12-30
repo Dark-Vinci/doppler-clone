@@ -8,10 +8,10 @@ pub trait Auth {
 }
 
 pub trait User {
-    async fn get_user(&self) -> String;
-    async fn delete_user(&self) -> String;
-    async fn deactivated_user(&self) -> String;
-    async fn get_users(&self) -> Vec<String>;
+    async fn get_one(&self) -> String;
+    async fn delete(&self) -> String;
+    async fn deactivated(&self) -> String;
+    async fn get_many(&self) -> Vec<String>;
 }
 
 pub trait Business {

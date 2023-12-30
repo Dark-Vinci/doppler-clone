@@ -2,7 +2,7 @@ use anyhow::Result;
 use dotenvy::dotenv;
 
 // use auth::application::app_data::AppData;
-use auth::application::application::App;
+use auth::application::application::{App, AppTrait};
 use auth::config::config::Config;
 use sdk;
 
@@ -22,7 +22,12 @@ async fn main() -> Result<()> {
 
     let config = Config::new();
 
-    let a = App::new("".to_string(), "".to_string(), config);
+    let a: &dyn AppTrait = &App::new(
+        "".to_string(),
+        "".to_string(), config,
+        "".to_string(),
+        "".to_string(),
+    );
 
 
     let a = sdk::add(1, 3);
