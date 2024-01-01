@@ -15,7 +15,6 @@ pub async fn graceful_shutdown() -> () {
             .await
     };
 
-
     #[cfg(not(unix))]
         let terminate = future::pending::<()>();
 
@@ -26,3 +25,4 @@ pub async fn graceful_shutdown() -> () {
 
     println!("SIGNAL RECEIVED🚨: Handling graceful shutdown🛑 server🦾")
 }
+

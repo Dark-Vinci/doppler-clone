@@ -1,10 +1,11 @@
 use anyhow::Result;
 use dotenvy::dotenv;
-
-// use auth::application::app_data::AppData;
-use auth::application::application::{App, AppTrait};
-use auth::config::config::Config;
 use sdk;
+
+use auth::application::application::{
+    App, AppTrait,
+};
+use auth::config::config::Config;
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -24,11 +25,11 @@ async fn main() -> Result<()> {
 
     let a: &dyn AppTrait = &App::new(
         "".to_string(),
-        "".to_string(), config,
+        "".to_string(),
+        config,
         "".to_string(),
         "".to_string(),
     );
-
 
     let a = sdk::add(1, 3);
     println!("{0}", a);
